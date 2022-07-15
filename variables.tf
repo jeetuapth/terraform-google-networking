@@ -9,26 +9,26 @@ variable "project" {
 variable "region" {
   type = string
   description = "GCP region"
-  default     = "us-central"
+  default     = null
 }
 # define GCP zone
 variable "zone" {
   type = string
   description = "GCP zone"
-  default     = "us-central1"
+  default     = null
 }
 
 # define private subnet
 variable "private_subnet_cidr_1" {
   type = string
   description = "private_subnet_CIDR 1"
-  default     = "null"
+  default     = null
 }
 
 # define application name
 variable "app_name" {
   type = string
   description = "Application name"
-  default     = "null"
+  default     = null
 }
 
