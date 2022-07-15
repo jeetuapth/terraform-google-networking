@@ -2,7 +2,7 @@
 variable "project" {
   type = string
   description = "GCP project name"
-  default = "lithe-bonito-356116"
+  default = "jitendralab"
 }
 
 # define GCP region
@@ -22,28 +22,13 @@ variable "zone" {
 variable "private_subnet_cidr_1" {
   type = string
   description = "private_subnet_CIDR 1"
-  default     = "10.10.1.0/24"
+  default     = "null"
 }
 
 # define application name
 variable "app_name" {
   type = string
   description = "Application name"
+  default     = "null"
 }
 
-# define application domain
-variable "app_domain" {
-  type = string
-  description = "Application domain"
-}
-
-# define application environment
-variable "app_environment" {
-  type = string
-  description = "Application environment"
-}
-
-variable "app_node_count" {
-  type = string
-  description = "Number of servers to build"
-}
