@@ -47,5 +47,4 @@ resource "google_compute_router_nat" "nat-gateway" {
   }
 output "nat_ip_address" {
   value = google_compute_address.nat-ip.address
-  value = google_compute_address.nat-ip.name
-}
+ }
