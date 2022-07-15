@@ -22,7 +22,7 @@ resource "google_compute_subnetwork" "private_subnet_1" {
 # Module to create a public ip for nat service
 
 resource "google_compute_address" "nat-ip" {
-  name = "${var.app_name}-nap-ip"
+  name = "${var.app_name}-nat-ip"
   project = var.project
   region  = var.region
 }
