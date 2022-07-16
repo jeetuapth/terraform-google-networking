@@ -7,7 +7,7 @@ resource "google_compute_network" "vpc" {
   auto_create_subnetworks = "false" 
   routing_mode = "GLOBAL"
 }
-
+/*
 # Module to create private subnet under Global VPC
 
 resource "google_compute_subnetwork" "private_subnet_1" {
@@ -15,6 +15,18 @@ resource "google_compute_subnetwork" "private_subnet_1" {
   purpose = "PRIVATE"
   name = "${var.app_name}-private-subnet-1"
   ip_cidr_range = var.private_subnet_cidr_1
+  network = google_compute_network.vpc.name
+  region = var.region
+}
+*/
+  
+resource "google_compute_subnetwork" "private_subnet" {
+  #provider = google
+  purpose = "PRIVATE"
+  count = length(var.private-subnet)
+  name  = var.private-subnet[count.index]
+  count = length(var.private_subnet_cidr)
+  ip_cidr_range  = var.private_subnet_cidr[count.index]
   network = google_compute_network.vpc.name
   region = var.region
 }
